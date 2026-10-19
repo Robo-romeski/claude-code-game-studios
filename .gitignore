@@ -1,6 +1,5 @@
 # === IDE and Editor ===
 .vs/
-.vscode/settings.json
 .idea/
 *.swp
 *.swo
@@ -20,6 +19,10 @@ production/session-state/
 .scratch/
 # Per-agent working memory written at runtime — not release material
 .claude/agent-memory/
+# Worktrees from the prototyper, isolated subagents and `claude --worktree`.
+# Each is a separate checkout; staging everything would add it as an embedded
+# repository.
+.claude/worktrees/
 
 
 # === Local sandboxes and scratch work ===
@@ -131,8 +134,6 @@ node_modules/
 *.7z
 
 # === Secrets and Environment ===
-.env
-.env.local
 .env.*.local
 *.pem
 *.key
@@ -171,3 +172,4 @@ $RECYCLE.BIN/
 # the project root. Anchored so a reports/ folder elsewhere stays tracked.
 /reports/
 /test-results/
+config.bat
